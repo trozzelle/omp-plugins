@@ -1,0 +1,37 @@
+name: Sync catalog
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-catalog
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Refresh the catalog from the plugins' latest releases
+        id: sync
+        run: |
+          result="$(bash scripts/sync-catalog.sh | tail -n 1)"
+          echo "result=$result" >>"$GITHUB_OUTPUT"
+          echo "catalog $result"
+
+      - name: Commit the updated catalog
+        if: steps.sync.outputs.result == 'changed'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          versions="$(jq -r '[.plugins[] | "\(.name) \(.version)"] | join(", ")' .omp-plugin/marketplace.json)"
+          git add .omp-plugin/marketplace.json
+          git commit -m "catalog: ${versions}"
+          git push
