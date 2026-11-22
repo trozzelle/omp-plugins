@@ -2,34 +2,36 @@
 
 An [OMP (oh-my-pi)](https://github.com/can1357/oh-my-pi) plugin marketplace.
 
-```bash
-omp plugin marketplace add trozzelle/omp-plugins
-omp plugin install omp-antigravity-bridge@trozzelle
-```
-
-Keep plugins current with:
+## Use
 
 ```bash
-omp plugin upgrade
+omp plugin marketplace add trozzelle/omp-plugins     # once
+omp plugin install <plugin>@trozzelle
+omp plugin upgrade                                   # later: update every marketplace plugin
+omp plugin uninstall <plugin>@trozzelle
 ```
 
-OMP refreshes the catalog on its own when its cached copy is older than 24 hours; `omp plugin marketplace update trozzelle` checks right away.
+OMP refreshes the catalog on its own once its cached copy is a day old; `omp plugin marketplace update trozzelle` checks right away. Inside OMP, `/marketplace` browses the catalog.
 
 ## Plugins
 
-| Plugin | Description |
-| --- | --- |
-| [`omp-antigravity-bridge`](https://github.com/trozzelle/omp-antigravity-bridge) | Gemini models through Google's official Antigravity CLI (`agy`) as an OMP provider, plus the `AskAntigravity` delegation tool. Requires `agy`, installed and signed in. Docs: [docs/OMP.md](https://github.com/trozzelle/omp-antigravity-bridge/blob/main/docs/OMP.md). |
+| Plugin | What it does | Needs |
+| --- | --- | --- |
+| [`omp-antigravity-bridge`](https://github.com/trozzelle/omp-antigravity-bridge) | Gemini models through Google's official Antigravity CLI as an OMP provider, a bridge that lets agy use your OMP tools, and the `AskAntigravity` delegation tool. | OMP 19.1+, the `agy` CLI installed and signed in |
 
 ## How the catalog stays current
 
-Each plugin repository publishes a `marketplace.json` with every release. The **Sync catalog** workflow in this repository runs every six hours (and on demand), copies the plugin entries from each plugin's latest release into [`.omp-plugin/marketplace.json`](.omp-plugin/marketplace.json), and commits the change. Entries must point back at their own repository; anything else is rejected.
+Each plugin repository publishes a `marketplace.json` with every release. The **Sync catalog** workflow here runs every six hours (and on demand), copies those plugin entries from each plugin's latest release into [`.omp-plugin/marketplace.json`](.omp-plugin/marketplace.json), and commits the change. An entry must point back at its own repository, or it is rejected. Plugin sources are listed at the top of [`scripts/sync-catalog.sh`](scripts/sync-catalog.sh).
 
 ## Switching from the release URL
 
-If you added this marketplace earlier through the long release URL (`…/releases/latest/download/marketplace.json`), swap the source; the installed plugin stays installed:
+If you added this marketplace through the long release URL (`…/releases/latest/download/marketplace.json`), swap the source; installed plugins stay installed:
 
 ```bash
 omp plugin marketplace remove trozzelle
 omp plugin marketplace add trozzelle/omp-plugins
 ```
+
+## License
+
+MIT.
