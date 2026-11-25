@@ -10,12 +10,12 @@
     {
       "name": "omp-antigravity-bridge",
       "description": "Gemini models through the Antigravity CLI (agy) for OMP, plus the AskAntigravity delegation tool. OMP port of @estebanforge/pi-antigravity-bridge.",
-      "version": "1.13.3-omp.2",
+      "version": "1.15.1-omp.1",
       "source": {
         "source": "github",
         "repo": "trozzelle/omp-antigravity-bridge",
-        "ref": "v1.13.3-omp.2-bundle",
-        "sha": "8f9dc23889b99a57e2f0f8381fc6623c0aad507b"
+        "ref": "v1.15.1-omp.1-bundle",
+        "sha": "f202863ce7a061681d3f93c77f6f4482de8e6716"
       },
       "homepage": "https://github.com/trozzelle/omp-antigravity-bridge/blob/main/docs/OMP.md",
       "license": "MIT",
