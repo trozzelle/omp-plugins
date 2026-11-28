@@ -34,6 +34,20 @@
       "homepage": "https://github.com/trozzelle/omp-rex#readme",
       "license": "MIT",
       "category": "development"
+    },
+    {
+      "name": "omp-sticky",
+      "description": "Harness-lifetime pinned steering context for OMP: /sticky pins ephemeral context across /new, resume, and fork without writing to disk.",
+      "version": "0.2.0",
+      "source": {
+        "source": "github",
+        "repo": "trozzelle/sticky",
+        "ref": "v0.2.0",
+        "sha": "1baa0345c57727d9c505b75e8ff07493391aa15d"
+      },
+      "homepage": "https://github.com/trozzelle/sticky#readme",
+      "license": "MIT",
+      "category": "development"
     }
   ]
 }

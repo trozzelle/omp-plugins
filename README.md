@@ -19,6 +19,7 @@ OMP refreshes the catalog on its own once its cached copy is a day old; `omp plu
 | --- | --- | --- |
 | [`omp-antigravity-bridge`](https://github.com/trozzelle/omp-antigravity-bridge) | Gemini models through Google's official Antigravity CLI as an OMP provider, a bridge that lets agy use your OMP tools, and the `AskAntigravity` delegation tool. | OMP 19.1+, the `agy` CLI installed and signed in |
 | [`omp-rex`](https://github.com/trozzelle/omp-rex) | Rex terminal multiplexer integration: Program Resume (OSC 7577), synced `resume.trust.omp` rule generation, `REX_BLOCK` context awareness, and `/rex` diagnostics. | OMP 19.1+, Rex |
+| [`omp-sticky`](https://github.com/trozzelle/sticky) | Harness-lifetime pinned steering context (`/sticky`, `/unsticky`, `alt+s`): survives `/new`, resume, and fork without writing to disk. | OMP 19.2+ |
 
 ## How the catalog stays current
 

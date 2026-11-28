@@ -9,6 +9,7 @@ set -euo pipefail
 SOURCES=(
 	trozzelle/omp-antigravity-bridge
 	trozzelle/omp-rex
+	trozzelle/sticky
 )
 
 root="$(cd "$(dirname "$0")/.." && pwd)"
