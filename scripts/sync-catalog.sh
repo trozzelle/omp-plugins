@@ -8,6 +8,7 @@ set -euo pipefail
 # Plugin repositories whose latest release carries a marketplace.json asset.
 SOURCES=(
 	trozzelle/omp-antigravity-bridge
+	trozzelle/omp-rex
 )
 
 root="$(cd "$(dirname "$0")/.." && pwd)"
