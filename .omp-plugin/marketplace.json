@@ -10,12 +10,12 @@
     {
       "name": "omp-antigravity-bridge",
       "description": "Gemini models through the Antigravity CLI (agy) for OMP, plus the AskAntigravity delegation tool. OMP port of @estebanforge/pi-antigravity-bridge.",
-      "version": "1.15.1-omp.2",
+      "version": "1.15.1-omp.3",
       "source": {
         "source": "github",
         "repo": "trozzelle/omp-antigravity-bridge",
-        "ref": "v1.15.1-omp.2-bundle",
-        "sha": "5670d64a0d482a09da5582ae310b207cf4926d54"
+        "ref": "v1.15.1-omp.3-bundle",
+        "sha": "636308800fdc9cfa8e8d11bd743541d10522cbf4"
       },
       "homepage": "https://github.com/trozzelle/omp-antigravity-bridge/blob/main/docs/OMP.md",
       "license": "MIT",
@@ -24,12 +24,12 @@
     {
       "name": "omp-rex",
       "description": "Rex terminal multiplexer integration for OMP: Program Resume (OSC 7577), synced trust rule generation, Rex context awareness, and /rex diagnostics.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "source": {
         "source": "github",
         "repo": "trozzelle/omp-rex",
-        "ref": "v0.1.0",
-        "sha": "7c322257ac8efae3405c4bc8b22d962ebd22e590"
+        "ref": "v0.1.1",
+        "sha": "0b7da250bb3174f8dcbf88b6e133b59df8ee507d"
       },
       "homepage": "https://github.com/trozzelle/omp-rex#readme",
       "license": "MIT",
