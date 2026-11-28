@@ -24,12 +24,12 @@
     {
       "name": "omp-rex",
       "description": "Rex terminal multiplexer integration for OMP: Program Resume (OSC 7577), synced trust rule generation, Rex context awareness, and /rex diagnostics.",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "source": {
         "source": "github",
         "repo": "trozzelle/omp-rex",
-        "ref": "v0.1.2",
-        "sha": "b0d54715bc722ebb1ca3f42b7b1c281b45303b37"
+        "ref": "v0.1.3",
+        "sha": "d156801ff4b6880a2f398d6de1179f6ef7b55fef"
       },
       "homepage": "https://github.com/trozzelle/omp-rex#readme",
       "license": "MIT",
